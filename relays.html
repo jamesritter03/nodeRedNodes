@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('relays',{
+        category: 'lime',
+        color: '#86f442',
+        defaults: {
+            name: {value:""},
+            ip: {value:"10.1.1.10"},
+            port: {value:"8080"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.png",
+        label: function() {
+            return this.name||"relays";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="relays">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-ip"><i class="icon-tag"></i> IP</label>
+        <input type="text" id="node-input-ip" placeholder="10.1.1.10">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-tag"></i> port</label>
+        <input type="text" id="node-input-port" placeholder="8080">
+    </div>
+    
+    
+</script>
+
+<script type="text/x-red" data-help-name="relays">
+    <p>Help Text goes here</p>
+</script>
